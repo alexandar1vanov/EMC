@@ -1,0 +1,900 @@
+2026-04-28T18:10:58.226+02:00  INFO 3848 --- [EMT-LAB] [main] m.u.finki.wp.emtlab.EmtLabApplication    : Starting EmtLabApplication using Java 21.0.6 with PID 3848 (C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes started by Aleksandar in C:\Users\Aleksandar\IdeaProjects\mau)
+2026-04-28T18:10:58.227+02:00 DEBUG 3848 --- [EMT-LAB] [main] m.u.finki.wp.emtlab.EmtLabApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-04-28T18:10:58.228+02:00  INFO 3848 --- [EMT-LAB] [main] m.u.finki.wp.emtlab.EmtLabApplication    : The following 1 profile is active: "dev"
+2026-04-28T18:10:59.623+02:00  INFO 3848 --- [EMT-LAB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T18:10:59.624+02:00  INFO 3848 --- [EMT-LAB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-04-28T18:10:59.665+02:00  INFO 3848 --- [EMT-LAB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T18:10:59.845+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2026-04-28T18:10:59.845+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+jdk.internal.loader.ClassLoaders$AppClassLoader@3fee733d
+ ...
+2026-04-28T18:10:59.845+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2026-04-28T18:10:59.845+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2026-04-28T18:10:59.845+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+jdk.internal.loader.ClassLoaders$AppClassLoader@3fee733d
+ ...
+2026-04-28T18:10:59.846+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/Aleksandar/IdeaProjects/mau/backend/target/classes/db/migration
+2026-04-28T18:10:59.847+02:00 DEBUG 3848 --- [EMT-LAB] [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\
+2026-04-28T18:10:59.847+02:00 DEBUG 3848 --- [EMT-LAB] [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\db\migration (db/migration)
+2026-04-28T18:10:59.849+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql
+2026-04-28T18:10:59.849+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1__create_entities.sql
+2026-04-28T18:10:59.849+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V2__prepopulate_data.sql
+2026-04-28T18:10:59.850+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V3__create_book_view.sql
+2026-04-28T18:10:59.850+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V4__fix_book_view_columns_names.sql
+2026-04-28T18:10:59.850+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V5__create_books_stats_materialized_view.sql
+2026-04-28T18:10:59.850+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V6__create_users_table.sql
+2026-04-28T18:10:59.850+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V7__add_audit_columns_to_users.sql
+2026-04-28T18:10:59.850+02:00 DEBUG 3848 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2026-04-28T18:10:59.856+02:00  INFO 3848 --- [EMT-LAB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T18:11:00.993+02:00 ERROR 3848 --- [EMT-LAB] [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtFilter' defined in file [C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\mk\ukim\finki\wp\emtlab\web\filter\JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\mk\ukim\finki\wp\emtlab\service\domain\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in mk.ukim.finki.wp.emtlab.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2026-04-28T18:11:01.014+02:00  INFO 3848 --- [EMT-LAB] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-28T18:11:01.018+02:00  WARN 3848 --- [EMT-LAB] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-04-28T18:11:01.036+02:00 ERROR 3848 --- [EMT-LAB] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.3.jar:3.4.3]
+	at mk.ukim.finki.wp.emtlab.EmtLabApplication.main(EmtLabApplication.java:18) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:520) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.4.3.jar:3.4.3]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtFilter' defined in file [C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\mk\ukim\finki\wp\emtlab\web\filter\JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\mk\ukim\finki\wp\emtlab\service\domain\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in mk.ukim.finki.wp.emtlab.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4467) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.4.3.jar:3.4.3]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\mk\ukim\finki\wp\emtlab\service\domain\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in mk.ukim.finki.wp.emtlab.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1664) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1552) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.3.jar:6.2.3]
+	... 56 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in mk.ukim.finki.wp.emtlab.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1711) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1460) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1606) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1552) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.3.jar:6.2.3]
+	... 70 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1361) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.3.jar:6.2.3]
+	... 83 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: FATAL: password authentication failed for user "sara"
+------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : FATAL: password authentication failed for user "sara"
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.3.jar:6.2.3]
+	... 95 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: FATAL: password authentication failed for user "sara"
+------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : FATAL: password authentication failed for user "sara"
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:71) ~[flyway-core-10.20.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-10.20.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:137) ~[flyway-core-10.20.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:176) ~[flyway-core-10.20.1.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.3.jar:3.4.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.3.jar:6.2.3]
+	... 104 common frames omitted
+Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "sara"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:698) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:207) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.Driver.makeConnection(Driver.java:446) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.3.jar:42.7.3]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59) ~[flyway-core-10.20.1.jar:na]
+	... 110 common frames omitted
+
+2026-04-28T18:12:11.978+02:00  INFO 12348 --- [EMT-LAB] [main] m.u.finki.wp.emtlab.EmtLabApplication    : Starting EmtLabApplication using Java 21.0.6 with PID 12348 (C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes started by Aleksandar in C:\Users\Aleksandar\IdeaProjects\mau)
+2026-04-28T18:12:11.979+02:00 DEBUG 12348 --- [EMT-LAB] [main] m.u.finki.wp.emtlab.EmtLabApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-04-28T18:12:11.980+02:00  INFO 12348 --- [EMT-LAB] [main] m.u.finki.wp.emtlab.EmtLabApplication    : The following 1 profile is active: "dev"
+2026-04-28T18:12:13.250+02:00  INFO 12348 --- [EMT-LAB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T18:12:13.251+02:00  INFO 12348 --- [EMT-LAB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-04-28T18:12:13.286+02:00  INFO 12348 --- [EMT-LAB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T18:12:13.448+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2026-04-28T18:12:13.448+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+jdk.internal.loader.ClassLoaders$AppClassLoader@3fee733d
+ ...
+2026-04-28T18:12:13.448+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2026-04-28T18:12:13.449+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2026-04-28T18:12:13.449+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+jdk.internal.loader.ClassLoaders$AppClassLoader@3fee733d
+ ...
+2026-04-28T18:12:13.449+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/Aleksandar/IdeaProjects/mau/backend/target/classes/db/migration
+2026-04-28T18:12:13.450+02:00 DEBUG 12348 --- [EMT-LAB] [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\
+2026-04-28T18:12:13.450+02:00 DEBUG 12348 --- [EMT-LAB] [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\db\migration (db/migration)
+2026-04-28T18:12:13.452+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql
+2026-04-28T18:12:13.452+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1__create_entities.sql
+2026-04-28T18:12:13.452+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V2__prepopulate_data.sql
+2026-04-28T18:12:13.452+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V3__create_book_view.sql
+2026-04-28T18:12:13.452+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V4__fix_book_view_columns_names.sql
+2026-04-28T18:12:13.452+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V5__create_books_stats_materialized_view.sql
+2026-04-28T18:12:13.452+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V6__create_users_table.sql
+2026-04-28T18:12:13.452+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V7__add_audit_columns_to_users.sql
+2026-04-28T18:12:13.452+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2026-04-28T18:12:13.457+02:00  INFO 12348 --- [EMT-LAB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T18:12:13.612+02:00  INFO 12348 --- [EMT-LAB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@8f4b803
+2026-04-28T18:12:13.613+02:00  INFO 12348 --- [EMT-LAB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T18:12:13.642+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.resource.ResourceNameValidator   : Validating R__create_refresh_procedure_for_books_stats_view.sql
+2026-04-28T18:12:13.642+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.resource.ResourceNameValidator   : Validating V2__prepopulate_data.sql
+2026-04-28T18:12:13.643+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.resource.ResourceNameValidator   : Validating V7__add_audit_columns_to_users.sql
+2026-04-28T18:12:13.643+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.resource.ResourceNameValidator   : Validating V5__create_books_stats_materialized_view.sql
+2026-04-28T18:12:13.643+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.resource.ResourceNameValidator   : Validating V4__fix_book_view_columns_names.sql
+2026-04-28T18:12:13.643+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.resource.ResourceNameValidator   : Validating V3__create_book_view.sql
+2026-04-28T18:12:13.643+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.resource.ResourceNameValidator   : Validating V6__create_users_table.sql
+2026-04-28T18:12:13.643+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1__create_entities.sql
+2026-04-28T18:12:13.649+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.database.DatabaseTypeRegister    : Multiple databases found that handle url 'jdbc:postgresql://localhost:5432/emt_lab': CockroachDB,PostgreSQL
+2026-04-28T18:12:13.650+02:00  INFO 12348 --- [EMT-LAB] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/emt_lab (PostgreSQL 17.4)
+2026-04-28T18:12:13.650+02:00 DEBUG 12348 --- [EMT-LAB] [main] org.flywaydb.core.FlywayExecutor         : Database Type: PostgreSQL
+2026-04-28T18:12:13.650+02:00 DEBUG 12348 --- [EMT-LAB] [main] org.flywaydb.core.FlywayExecutor         : Driver: PostgreSQL JDBC Driver 42.7.3
+2026-04-28T18:12:13.650+02:00 DEBUG 12348 --- [EMT-LAB] [main] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: true
+2026-04-28T18:12:13.651+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
+2026-04-28T18:12:13.652+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
+2026-04-28T18:12:13.684+02:00 DEBUG 12348 --- [EMT-LAB] [main] org.flywaydb.core.FlywayExecutor         : Scanning for script callbacks ...
+2026-04-28T18:12:13.685+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+2026-04-28T18:12:13.697+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.command.DbValidate     : Validating migrations ...
+2026-04-28T18:12:13.700+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T18:12:13.701+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:12:13.713+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:12:13.713+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:12:13.713+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:12:13.713+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:12:13.713+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:12:13.713+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:12:13.713+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:12:13.717+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:12:13.717+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:12:13.717+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:12:13.717+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:12:13.717+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:12:13.718+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:12:13.718+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:12:13.718+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:12:13.718+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:12:13.719+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:12:13.751+02:00  INFO 12348 --- [EMT-LAB] [main] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.053s)
+2026-04-28T18:12:13.753+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.command.DbSchemas      : Skipping creation of existing schema: "public"
+2026-04-28T18:12:13.763+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T18:12:13.765+02:00  INFO 12348 --- [EMT-LAB] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2026-04-28T18:12:13.768+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.flywaydb.core.internal.parser.Parser   : Parsing V6__create_users_table.sql ...
+2026-04-28T18:12:13.774+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 1: CREATE TABLE users (
+                       id BIGSERIAL PRIMARY KEY,
+                       username VARCHAR(255) UNIQUE NOT NULL,
+                       password VARCHAR(255) NOT NULL,
+                       role VARCHAR(50) NOT NULL
+)
+2026-04-28T18:12:13.776+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.command.DbMigrate      : Starting migration of schema "public" to version "6 - create users table" ...
+2026-04-28T18:12:13.779+02:00  INFO 12348 --- [EMT-LAB] [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "6 - create users table"
+2026-04-28T18:12:13.782+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE users (
+                       id BIGSERIAL PRIMARY KEY,
+                       username VARCHAR(255) UNIQUE NOT NULL,
+                       password VARCHAR(255) NOT NULL,
+                       role VARCHAR(50) NOT NULL
+)
+2026-04-28T18:12:13.869+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2026-04-28T18:12:13.869+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.command.DbMigrate      : Successfully completed migration of schema "public" to version "6 - create users table"
+2026-04-28T18:12:13.874+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema History table "public"."flyway_schema_history" successfully updated to reflect changes
+2026-04-28T18:12:13.876+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T18:12:13.877+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.flywaydb.core.internal.parser.Parser   : Parsing V7__add_audit_columns_to_users.sql ...
+2026-04-28T18:12:13.879+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 1: alter table users add column created_at timestamp not null default now()
+2026-04-28T18:12:13.879+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 2: alter table users add column updated_at timestamp not null default now()
+2026-04-28T18:12:13.879+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.command.DbMigrate      : Starting migration of schema "public" to version "7 - add audit columns to users" ...
+2026-04-28T18:12:13.881+02:00  INFO 12348 --- [EMT-LAB] [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "7 - add audit columns to users"
+2026-04-28T18:12:13.881+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: alter table users add column created_at timestamp not null default now()
+2026-04-28T18:12:13.883+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2026-04-28T18:12:13.883+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: alter table users add column updated_at timestamp not null default now()
+2026-04-28T18:12:13.883+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2026-04-28T18:12:13.883+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.core.internal.command.DbMigrate      : Successfully completed migration of schema "public" to version "7 - add audit columns to users"
+2026-04-28T18:12:13.885+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema History table "public"."flyway_schema_history" successfully updated to reflect changes
+2026-04-28T18:12:13.886+02:00 DEBUG 12348 --- [EMT-LAB] [main] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T18:12:13.892+02:00  INFO 12348 --- [EMT-LAB] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v7 (execution time 00:00.096s)
+2026-04-28T18:12:13.901+02:00 DEBUG 12348 --- [EMT-LAB] [main] org.flywaydb.core.FlywayExecutor         : Memory usage: 50 of 80M
+2026-04-28T18:12:13.985+02:00  INFO 12348 --- [EMT-LAB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-28T18:12:14.044+02:00  INFO 12348 --- [EMT-LAB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2026-04-28T18:12:14.076+02:00  INFO 12348 --- [EMT-LAB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-28T18:12:14.455+02:00  INFO 12348 --- [EMT-LAB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-28T18:12:15.318+02:00  INFO 12348 --- [EMT-LAB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-28T18:12:15.718+02:00  WARN 12348 --- [EMT-LAB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-28T18:12:15.846+02:00 DEBUG 12348 --- [EMT-LAB] [main] m.u.f.wp.emtlab.web.filter.JwtFilter     : Filter 'jwtFilter' configured for use
+2026-04-28T18:12:16.924+02:00  INFO 12348 --- [EMT-LAB] [main] m.u.finki.wp.emtlab.EmtLabApplication    : Started EmtLabApplication in 5.308 seconds (process running for 5.821)
+2026-04-28T18:13:00.018+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:13:00.076+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:14:00.005+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:14:00.011+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:14:23.098+02:00  INFO 12348 --- [EMT-LAB] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-28T18:14:23.250+02:00  WARN 12348 --- [EMT-LAB] [http-nio-8080-exec-1] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-04-28T18:15:00.010+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:15:00.024+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:16:00.030+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:16:00.043+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:17:00.016+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:17:00.024+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:18:00.014+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:18:00.018+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:19:00.007+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:19:00.013+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:20:00.016+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:20:00.029+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:21:00.003+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:21:00.014+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:22:00.007+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:22:00.014+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:23:00.006+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:23:00.012+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:24:00.005+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:24:00.013+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:25:00.003+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:25:00.010+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:26:00.010+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:26:00.021+02:00  INFO 12348 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:26:06.903+02:00  INFO 12348 --- [EMT-LAB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-28T18:26:06.905+02:00  INFO 12348 --- [EMT-LAB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-28T18:53:29.254+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Starting EmtLabApplication using Java 21.0.6 with PID 4612 (C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes started by Aleksandar in C:\Users\Aleksandar\IdeaProjects\mau)
+2026-04-28T18:53:29.255+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-04-28T18:53:29.256+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : The following 1 profile is active: "dev"
+2026-04-28T18:53:30.695+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T18:53:30.695+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-04-28T18:53:30.726+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T18:53:30.895+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2026-04-28T18:53:30.895+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4600fe76
+ ...
+2026-04-28T18:53:30.895+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2026-04-28T18:53:30.895+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2026-04-28T18:53:30.895+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4600fe76
+ ...
+2026-04-28T18:53:30.896+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/Aleksandar/IdeaProjects/mau/backend/target/classes/db/migration
+2026-04-28T18:53:30.897+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\
+2026-04-28T18:53:30.897+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\db\migration (db/migration)
+2026-04-28T18:53:30.898+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql
+2026-04-28T18:53:30.898+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1__create_entities.sql
+2026-04-28T18:53:30.898+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V2__prepopulate_data.sql
+2026-04-28T18:53:30.898+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V3__create_book_view.sql
+2026-04-28T18:53:30.899+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V4__fix_book_view_columns_names.sql
+2026-04-28T18:53:30.899+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V5__create_books_stats_materialized_view.sql
+2026-04-28T18:53:30.899+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V6__create_users_table.sql
+2026-04-28T18:53:30.899+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V7__add_audit_columns_to_users.sql
+2026-04-28T18:53:30.899+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2026-04-28T18:53:30.905+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T18:53:31.064+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@609de513
+2026-04-28T18:53:31.065+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T18:53:31.080+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating R__create_refresh_procedure_for_books_stats_view.sql
+2026-04-28T18:53:31.081+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V2__prepopulate_data.sql
+2026-04-28T18:53:31.081+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V7__add_audit_columns_to_users.sql
+2026-04-28T18:53:31.081+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V5__create_books_stats_materialized_view.sql
+2026-04-28T18:53:31.081+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V4__fix_book_view_columns_names.sql
+2026-04-28T18:53:31.081+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V3__create_book_view.sql
+2026-04-28T18:53:31.081+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V6__create_users_table.sql
+2026-04-28T18:53:31.081+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V1__create_entities.sql
+2026-04-28T18:53:31.085+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.database.DatabaseTypeRegister    : Multiple databases found that handle url 'jdbc:postgresql://localhost:5432/emt_lab': CockroachDB,PostgreSQL
+2026-04-28T18:53:31.085+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/emt_lab (PostgreSQL 17.4)
+2026-04-28T18:53:31.085+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database Type: PostgreSQL
+2026-04-28T18:53:31.085+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Driver: PostgreSQL JDBC Driver 42.7.3
+2026-04-28T18:53:31.085+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: true
+2026-04-28T18:53:31.086+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
+2026-04-28T18:53:31.086+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
+2026-04-28T18:53:31.095+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Scanning for script callbacks ...
+2026-04-28T18:53:31.096+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+2026-04-28T18:53:31.102+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbValidate     : Validating migrations ...
+2026-04-28T18:53:31.105+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T18:53:31.108+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:53:31.119+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:53:31.119+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:53:31.119+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:53:31.119+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:53:31.119+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:53:31.119+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:53:31.119+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:53:31.122+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:53:31.123+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:53:31.123+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:53:31.123+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:53:31.123+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:53:31.123+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:53:31.123+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:53:31.123+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:53:31.123+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:53:31.124+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:53:31.124+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:53:31.125+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:53:31.144+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.039s)
+2026-04-28T18:53:31.146+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbSchemas      : Skipping creation of existing schema: "public"
+2026-04-28T18:53:31.195+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T18:53:31.197+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 7
+2026-04-28T18:53:31.200+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-04-28T18:53:31.207+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Memory usage: 58 of 88M
+2026-04-28T18:53:31.272+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-28T18:53:31.329+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2026-04-28T18:53:31.364+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-28T18:53:31.674+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-28T18:53:32.470+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-28T18:53:32.798+02:00  WARN 4612 --- [EMT-LAB] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-28T18:53:32.924+02:00 DEBUG 4612 --- [EMT-LAB] [restartedMain] m.u.f.wp.emtlab.web.filter.JwtFilter     : Filter 'jwtFilter' configured for use
+2026-04-28T18:53:34.037+02:00  INFO 4612 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Started EmtLabApplication in 5.151 seconds (process running for 5.903)
+2026-04-28T18:53:51.812+02:00  INFO 4612 --- [EMT-LAB] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-28T18:53:52.073+02:00  WARN 4612 --- [EMT-LAB] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 96 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.]
+2026-04-28T18:54:00.025+02:00  INFO 4612 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:54:00.074+02:00  INFO 4612 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:54:15.809+02:00  WARN 4612 --- [EMT-LAB] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 96 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.]
+2026-04-28T18:54:40.432+02:00  WARN 4612 --- [EMT-LAB] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 96 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.]
+2026-04-28T18:55:00.020+02:00  INFO 4612 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:55:00.032+02:00  INFO 4612 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:56:00.014+02:00  INFO 4612 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:56:00.022+02:00  INFO 4612 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:56:33.713+02:00  INFO 4612 --- [EMT-LAB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-28T18:56:33.717+02:00  INFO 4612 --- [EMT-LAB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-28T18:56:36.375+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Starting EmtLabApplication using Java 21.0.6 with PID 1000 (C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes started by Aleksandar in C:\Users\Aleksandar\IdeaProjects\mau)
+2026-04-28T18:56:36.376+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-04-28T18:56:36.377+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : The following 1 profile is active: "dev"
+2026-04-28T18:56:37.580+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T18:56:37.581+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-04-28T18:56:37.619+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T18:56:37.774+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2026-04-28T18:56:37.774+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4600fe76
+ ...
+2026-04-28T18:56:37.775+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2026-04-28T18:56:37.775+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2026-04-28T18:56:37.775+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4600fe76
+ ...
+2026-04-28T18:56:37.775+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/Aleksandar/IdeaProjects/mau/backend/target/classes/db/migration
+2026-04-28T18:56:37.776+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\
+2026-04-28T18:56:37.776+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\db\migration (db/migration)
+2026-04-28T18:56:37.777+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql
+2026-04-28T18:56:37.778+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1__create_entities.sql
+2026-04-28T18:56:37.778+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V2__prepopulate_data.sql
+2026-04-28T18:56:37.778+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V3__create_book_view.sql
+2026-04-28T18:56:37.778+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V4__fix_book_view_columns_names.sql
+2026-04-28T18:56:37.778+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V5__create_books_stats_materialized_view.sql
+2026-04-28T18:56:37.778+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V6__create_users_table.sql
+2026-04-28T18:56:37.778+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V7__add_audit_columns_to_users.sql
+2026-04-28T18:56:37.778+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2026-04-28T18:56:37.782+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T18:56:37.914+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1d1b95d7
+2026-04-28T18:56:37.915+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T18:56:37.932+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating R__create_refresh_procedure_for_books_stats_view.sql
+2026-04-28T18:56:37.932+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V2__prepopulate_data.sql
+2026-04-28T18:56:37.932+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V7__add_audit_columns_to_users.sql
+2026-04-28T18:56:37.932+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V5__create_books_stats_materialized_view.sql
+2026-04-28T18:56:37.932+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V4__fix_book_view_columns_names.sql
+2026-04-28T18:56:37.932+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V3__create_book_view.sql
+2026-04-28T18:56:37.933+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V6__create_users_table.sql
+2026-04-28T18:56:37.933+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V1__create_entities.sql
+2026-04-28T18:56:37.937+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.database.DatabaseTypeRegister    : Multiple databases found that handle url 'jdbc:postgresql://localhost:5432/emt_lab': CockroachDB,PostgreSQL
+2026-04-28T18:56:37.937+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/emt_lab (PostgreSQL 17.4)
+2026-04-28T18:56:37.937+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database Type: PostgreSQL
+2026-04-28T18:56:37.937+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Driver: PostgreSQL JDBC Driver 42.7.3
+2026-04-28T18:56:37.937+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: true
+2026-04-28T18:56:37.938+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
+2026-04-28T18:56:37.938+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
+2026-04-28T18:56:37.946+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Scanning for script callbacks ...
+2026-04-28T18:56:37.948+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+2026-04-28T18:56:37.955+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbValidate     : Validating migrations ...
+2026-04-28T18:56:37.956+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T18:56:37.957+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:56:37.964+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:56:37.964+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:56:37.964+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:56:37.964+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:56:37.964+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:56:37.964+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:56:37.965+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:56:37.967+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:56:37.967+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:56:37.967+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:56:37.967+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:56:37.967+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:56:37.967+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:56:37.967+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:56:37.968+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:56:37.968+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:56:37.968+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T18:56:37.968+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:56:37.968+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:56:37.968+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:56:37.969+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:56:37.969+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:56:37.969+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:56:37.969+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:56:37.969+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T18:56:37.969+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T18:56:37.969+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T18:56:37.969+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T18:56:37.969+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T18:56:37.969+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T18:56:37.969+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T18:56:37.985+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.028s)
+2026-04-28T18:56:37.987+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbSchemas      : Skipping creation of existing schema: "public"
+2026-04-28T18:56:38.037+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T18:56:38.039+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 7
+2026-04-28T18:56:38.041+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-04-28T18:56:38.048+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Memory usage: 59 of 88M
+2026-04-28T18:56:38.116+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-28T18:56:38.159+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2026-04-28T18:56:38.195+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-28T18:56:38.459+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-28T18:56:39.185+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-28T18:56:39.493+02:00  WARN 1000 --- [EMT-LAB] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-28T18:56:39.613+02:00 DEBUG 1000 --- [EMT-LAB] [restartedMain] m.u.f.wp.emtlab.web.filter.JwtFilter     : Filter 'jwtFilter' configured for use
+2026-04-28T18:56:40.675+02:00  INFO 1000 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Started EmtLabApplication in 4.649 seconds (process running for 5.31)
+2026-04-28T18:56:59.208+02:00  INFO 1000 --- [EMT-LAB] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-28T18:56:59.325+02:00  WARN 1000 --- [EMT-LAB] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 96 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.]
+2026-04-28T18:57:00.010+02:00  INFO 1000 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:57:00.045+02:00  INFO 1000 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:58:00.012+02:00  INFO 1000 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:58:00.017+02:00  INFO 1000 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T18:59:00.012+02:00  INFO 1000 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T18:59:00.022+02:00  INFO 1000 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:00:00.015+02:00  INFO 1000 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:00:00.021+02:00  INFO 1000 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:00:24.710+02:00  INFO 1000 --- [EMT-LAB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-28T19:00:24.713+02:00  INFO 1000 --- [EMT-LAB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-28T19:00:27.141+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Starting EmtLabApplication using Java 21.0.6 with PID 14428 (C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes started by Aleksandar in C:\Users\Aleksandar\IdeaProjects\mau)
+2026-04-28T19:00:27.143+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-04-28T19:00:27.143+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : The following 1 profile is active: "dev"
+2026-04-28T19:00:28.337+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T19:00:28.337+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-04-28T19:00:28.367+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T19:00:28.526+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2026-04-28T19:00:28.526+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4600fe76
+ ...
+2026-04-28T19:00:28.526+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2026-04-28T19:00:28.526+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2026-04-28T19:00:28.526+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4600fe76
+ ...
+2026-04-28T19:00:28.526+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/Aleksandar/IdeaProjects/mau/backend/target/classes/db/migration
+2026-04-28T19:00:28.528+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\
+2026-04-28T19:00:28.528+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\db\migration (db/migration)
+2026-04-28T19:00:28.529+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql
+2026-04-28T19:00:28.529+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1__create_entities.sql
+2026-04-28T19:00:28.529+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V2__prepopulate_data.sql
+2026-04-28T19:00:28.529+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V3__create_book_view.sql
+2026-04-28T19:00:28.529+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V4__fix_book_view_columns_names.sql
+2026-04-28T19:00:28.529+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V5__create_books_stats_materialized_view.sql
+2026-04-28T19:00:28.529+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V6__create_users_table.sql
+2026-04-28T19:00:28.529+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V7__add_audit_columns_to_users.sql
+2026-04-28T19:00:28.529+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2026-04-28T19:00:28.533+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T19:00:28.671+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f2afec7
+2026-04-28T19:00:28.673+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T19:00:28.692+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating R__create_refresh_procedure_for_books_stats_view.sql
+2026-04-28T19:00:28.693+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V2__prepopulate_data.sql
+2026-04-28T19:00:28.693+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V7__add_audit_columns_to_users.sql
+2026-04-28T19:00:28.693+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V5__create_books_stats_materialized_view.sql
+2026-04-28T19:00:28.693+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V4__fix_book_view_columns_names.sql
+2026-04-28T19:00:28.693+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V3__create_book_view.sql
+2026-04-28T19:00:28.693+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V6__create_users_table.sql
+2026-04-28T19:00:28.693+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V1__create_entities.sql
+2026-04-28T19:00:28.698+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.database.DatabaseTypeRegister    : Multiple databases found that handle url 'jdbc:postgresql://localhost:5432/emt_lab': CockroachDB,PostgreSQL
+2026-04-28T19:00:28.698+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/emt_lab (PostgreSQL 17.4)
+2026-04-28T19:00:28.698+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database Type: PostgreSQL
+2026-04-28T19:00:28.698+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Driver: PostgreSQL JDBC Driver 42.7.3
+2026-04-28T19:00:28.698+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: true
+2026-04-28T19:00:28.699+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
+2026-04-28T19:00:28.699+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
+2026-04-28T19:00:28.710+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Scanning for script callbacks ...
+2026-04-28T19:00:28.712+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+2026-04-28T19:00:28.720+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbValidate     : Validating migrations ...
+2026-04-28T19:00:28.722+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T19:00:28.723+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T19:00:28.731+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T19:00:28.731+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T19:00:28.731+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T19:00:28.731+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T19:00:28.731+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T19:00:28.731+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T19:00:28.731+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T19:00:28.735+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T19:00:28.735+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T19:00:28.735+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T19:00:28.735+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T19:00:28.735+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T19:00:28.735+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T19:00:28.735+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T19:00:28.735+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T19:00:28.735+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T19:00:28.736+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T19:00:28.736+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T19:00:28.736+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T19:00:28.736+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T19:00:28.736+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T19:00:28.736+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T19:00:28.736+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T19:00:28.736+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T19:00:28.737+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T19:00:28.737+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T19:00:28.737+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T19:00:28.737+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T19:00:28.737+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T19:00:28.737+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T19:00:28.737+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T19:00:28.756+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.034s)
+2026-04-28T19:00:28.759+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbSchemas      : Skipping creation of existing schema: "public"
+2026-04-28T19:00:28.820+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T19:00:28.822+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 7
+2026-04-28T19:00:28.825+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-04-28T19:00:28.830+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Memory usage: 58 of 88M
+2026-04-28T19:00:28.885+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-28T19:00:28.927+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2026-04-28T19:00:28.956+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-28T19:00:29.206+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-28T19:00:29.937+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-28T19:00:30.244+02:00  WARN 14428 --- [EMT-LAB] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-28T19:00:30.364+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] m.u.f.wp.emtlab.web.filter.JwtFilter     : Filter 'jwtFilter' configured for use
+2026-04-28T19:00:31.407+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Started EmtLabApplication in 4.568 seconds (process running for 5.138)
+2026-04-28T19:00:44.735+02:00  INFO 14428 --- [EMT-LAB] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-28T19:00:45.001+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:00:45.001+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:00:53.622+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:00:53.622+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:01:00.025+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:01:00.087+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:02:00.008+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:02:00.013+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:02:03.101+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:02:03.102+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:02:28.595+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:02:28.601+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:03:00.015+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:03:00.027+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:03:42.588+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:04:00.001+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:04:00.005+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:05:00.002+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:05:00.007+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:06:00.016+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:06:00.022+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:07:00.014+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:07:00.019+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:08:00.003+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:08:00.008+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:09:00.009+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:09:00.016+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:10:00.004+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:10:00.009+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:11:00.014+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:11:00.019+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:12:00.014+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:12:00.018+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:13:00.013+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:13:00.017+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:13:27.864+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:13:30.196+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:14:00.008+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:14:00.016+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:14:15.899+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:15:00.005+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:15:00.015+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:16:00.004+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:16:00.009+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:16:25.022+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-1] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-04-28T19:16:33.795+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:16:51.098+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:17:00.007+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:17:00.011+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:17:26.803+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:17:45.217+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:17:55.422+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:18:00.016+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:18:00.020+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:18:21.814+02:00  WARN 14428 --- [EMT-LAB] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0]
+2026-04-28T19:19:00.011+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:19:00.022+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:20:00.010+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:20:00.016+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:21:00.009+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:21:00.009+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:22:00.013+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : Refreshing BOOKS_STATS_VIEW...
+2026-04-28T19:22:00.019+02:00  INFO 14428 --- [EMT-LAB] [scheduling-1] f.w.e.j.MaterializedViewRefreshScheduler : BOOKS_STATS_VIEW successfully refreshed.
+2026-04-28T19:22:28.998+02:00  INFO 14428 --- [EMT-LAB] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-28T19:22:29.000+02:00  INFO 14428 --- [EMT-LAB] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-28T19:22:29.072+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Starting EmtLabApplication using Java 21.0.6 with PID 14428 (C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes started by Aleksandar in C:\Users\Aleksandar\IdeaProjects\mau)
+2026-04-28T19:22:29.072+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-04-28T19:22:29.072+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : The following 1 profile is active: "dev"
+2026-04-28T19:22:29.460+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T19:22:29.461+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-04-28T19:22:29.474+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T19:22:29.544+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2026-04-28T19:22:29.544+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@57085f9c
+ ...
+2026-04-28T19:22:29.544+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2026-04-28T19:22:29.546+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2026-04-28T19:22:29.546+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@57085f9c
+ ...
+2026-04-28T19:22:29.546+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/Aleksandar/IdeaProjects/mau/backend/target/classes/db/migration
+2026-04-28T19:22:29.546+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\
+2026-04-28T19:22:29.546+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\Aleksandar\IdeaProjects\mau\backend\target\classes\db\migration (db/migration)
+2026-04-28T19:22:29.547+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql
+2026-04-28T19:22:29.547+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1__create_entities.sql
+2026-04-28T19:22:29.547+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V2__prepopulate_data.sql
+2026-04-28T19:22:29.547+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V3__create_book_view.sql
+2026-04-28T19:22:29.547+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V4__fix_book_view_columns_names.sql
+2026-04-28T19:22:29.547+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V5__create_books_stats_materialized_view.sql
+2026-04-28T19:22:29.547+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V6__create_users_table.sql
+2026-04-28T19:22:29.547+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V7__add_audit_columns_to_users.sql
+2026-04-28T19:22:29.547+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2026-04-28T19:22:29.547+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-04-28T19:22:29.594+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@241bee53
+2026-04-28T19:22:29.594+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating R__create_refresh_procedure_for_books_stats_view.sql
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V2__prepopulate_data.sql
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V7__add_audit_columns_to_users.sql
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V5__create_books_stats_materialized_view.sql
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V4__fix_book_view_columns_names.sql
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V3__create_book_view.sql
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V6__create_users_table.sql
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.resource.ResourceNameValidator   : Validating V1__create_entities.sql
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.database.DatabaseTypeRegister    : Multiple databases found that handle url 'jdbc:postgresql://localhost:5432/emt_lab': CockroachDB,PostgreSQL
+2026-04-28T19:22:29.595+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/emt_lab (PostgreSQL 17.4)
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database Type: PostgreSQL
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Driver: PostgreSQL JDBC Driver 42.7.3
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: true
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
+2026-04-28T19:22:29.595+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
+2026-04-28T19:22:29.599+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Scanning for script callbacks ...
+2026-04-28T19:22:29.599+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+2026-04-28T19:22:29.602+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbValidate     : Validating migrations ...
+2026-04-28T19:22:29.602+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T19:22:29.602+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T19:22:29.608+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T19:22:29.608+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T19:22:29.608+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T19:22:29.608+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T19:22:29.608+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T19:22:29.608+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T19:22:29.608+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T19:22:29.609+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T19:22:29.609+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/R__create_refresh_procedure_for_books_stats_view.sql (filename: R__create_refresh_procedure_for_books_stats_view.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V2__prepopulate_data.sql (filename: V2__prepopulate_data.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V7__add_audit_columns_to_users.sql (filename: V7__add_audit_columns_to_users.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V5__create_books_stats_materialized_view.sql (filename: V5__create_books_stats_materialized_view.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V4__fix_book_view_columns_names.sql (filename: V4__fix_book_view_columns_names.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V3__create_book_view.sql (filename: V3__create_book_view.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V6__create_users_table.sql (filename: V6__create_users_table.sql)
+2026-04-28T19:22:29.610+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__create_entities.sql (filename: V1__create_entities.sql)
+2026-04-28T19:22:29.616+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.014s)
+2026-04-28T19:22:29.617+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbSchemas      : Skipping creation of existing schema: "public"
+2026-04-28T19:22:29.669+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] o.f.c.a.c.ClassicConfiguration           : CherryPickConfigurationExtension not found
+2026-04-28T19:22:29.670+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 7
+2026-04-28T19:22:29.671+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-04-28T19:22:29.672+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] org.flywaydb.core.FlywayExecutor         : Memory usage: 47 of 120M
+2026-04-28T19:22:29.691+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-28T19:22:29.692+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-28T19:22:29.708+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-28T19:22:29.860+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-28T19:22:29.981+02:00  WARN 14428 --- [EMT-LAB] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-28T19:22:30.041+02:00 DEBUG 14428 --- [EMT-LAB] [restartedMain] m.u.f.wp.emtlab.web.filter.JwtFilter     : Filter 'jwtFilter' configured for use
+2026-04-28T19:22:30.502+02:00  INFO 14428 --- [EMT-LAB] [restartedMain] m.u.finki.wp.emtlab.EmtLabApplication    : Started EmtLabApplication in 1.454 seconds (process running for 1324.233)
+2026-04-28T19:22:31.920+02:00  INFO 14428 --- [EMT-LAB] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-04-28T19:22:31.921+02:00  INFO 14428 --- [EMT-LAB] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.

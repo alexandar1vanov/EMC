@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="805ad448-b739-4ed0-ba84-ac6532b63404" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api/types/book.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/types/book.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/axios/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/axios/axios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/pages/BookDetailsPage/BookDetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/pages/BookDetailsPage/BookDetailsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/pages/BooksPage/BooksPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/pages/BooksPage/BooksPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/pages/LoginPage/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/pages/LoginPage/LoginPage.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/frontend" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alexandar1vanov&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/saracipevska/EMT-frontend.git",
+    "accountId": "db48d7d2-7d8d-4bfb-9224-cb5bedbd9ac3"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3Czc0peNyvmeM7C6u5TGdf2Ncjm" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.EmtLabApplication.executor": "Debug",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Aleksandar/IdeaProjects/mau",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Users\\Aleksandar\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aleksandar\IdeaProjects\mau\backend" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.EmtLabApplication">
+    <configuration name="EmtLabApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="EMT-LAB" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="mk.ukim.finki.wp.emtlab.EmtLabApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="Spring Boot.EmtLabApplication" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="805ad448-b739-4ed0-ba84-ac6532b63404" name="Changes" comment="" />
+      <created>1777391619636</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777391619636</updated>
+      <workItem from="1777391620553" duration="513000" />
+      <workItem from="1777392169717" duration="5061000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
