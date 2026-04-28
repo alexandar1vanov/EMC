@@ -1,6 +1,6 @@
 package mk.ukim.finki.wp.emtlab.web.controller;
 
-import mk.ukim.finki.wp.emtlab.model.BookView;
+import mk.ukim.finki.wp.emtlab.model.views.BookView;
 import mk.ukim.finki.wp.emtlab.model.domain.ActivityLog;
 import mk.ukim.finki.wp.emtlab.model.dto.CreateBookDTO;
 import mk.ukim.finki.wp.emtlab.model.dto.DisplayBookDTO;

@@ -20,7 +20,7 @@ const BookDetailsPage = () => {
                 <Typography variant="h4" sx={{ mb: 2 }}>
                     {book.name}
                 </Typography>
-                <Typography>Author: {book.authorIds}</Typography>
+                <Typography>Authors: {book.authorFullNames.join(", ")}</Typography>
                 <Typography>Category: {book.categoryId}</Typography>
                 <Typography>Available copies: {book.availableCopies}</Typography>
                 <Typography>State: {book.stateId}</Typography>

@@ -1,10 +1,10 @@
 import type {Author} from './author'
 
 export interface Book {
-    id: number; //TODO: dodaj na backend
+    id: number;
     name: string;
     categoryId: number;
-    authorIds: number [];
+    authorFullNames: string [];
     availableCopies: number;
     stateId: number;
 
