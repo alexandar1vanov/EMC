@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="805ad448-b739-4ed0-ba84-ac6532b63404" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/mk/ukim/finki/wp/emtlab/model/BookView.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/mk/ukim/finki/wp/emtlab/model/views/BookView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/mk/ukim/finki/wp/emtlab/model/dto/DisplayBookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/mk/ukim/finki/wp/emtlab/model/dto/DisplayBookDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/mk/ukim/finki/wp/emtlab/repository/BookViewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/mk/ukim/finki/wp/emtlab/repository/BookViewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/mk/ukim/finki/wp/emtlab/web/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/mk/ukim/finki/wp/emtlab/web/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/api/types/book.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/types/book.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/axios/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/axios/axios.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/ui/pages/BookDetailsPage/BookDetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/pages/BookDetailsPage/BookDetailsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/ui/pages/BooksPage/BooksPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/pages/BooksPage/BooksPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/pages/LoginPage/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/pages/LoginPage/LoginPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +22,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/frontend" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/backend" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -26,12 +35,12 @@
     &quot;assignee&quot;: &quot;alexandar1vanov&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/saracipevska/EMT-frontend.git",
-    "accountId": "db48d7d2-7d8d-4bfb-9224-cb5bedbd9ac3"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/alexandar1vanov/EMC.git&quot;,
+    &quot;accountId&quot;: &quot;db48d7d2-7d8d-4bfb-9224-cb5bedbd9ac3&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -61,7 +70,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.EmtLabApplication.executor": "Debug",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feature/refactor__dto",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Aleksandar/IdeaProjects/mau",
@@ -73,7 +82,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "ts.external.directory.path": "C:\\Users\\Aleksandar\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -121,11 +130,19 @@
       <option name="presentableId" value="Default" />
       <updated>1777391619636</updated>
       <workItem from="1777391620553" duration="513000" />
-      <workItem from="1777392169717" duration="5061000" />
+      <workItem from="1777392169717" duration="6343000" />
+      <workItem from="1777398556945" duration="739000" />
+      <workItem from="1777399495156" duration="115000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/backend" />
+      <path value="$PROJECT_DIR$/frontend" />
+    </ignored-roots>
   </component>
 </project>

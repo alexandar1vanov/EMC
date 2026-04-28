@@ -1,4 +1,4 @@
-package mk.ukim.finki.wp.emtlab.model;
+package mk.ukim.finki.wp.emtlab.model.views;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

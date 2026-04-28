@@ -16,7 +16,7 @@ const BooksPage = () => {
             {books.map((book) => (
                 <Paper key={book.id} sx={{ p: 2, mb: 2 }}>
                     <Typography variant="h6">{book.name}</Typography>
-                    <Typography>Author: {book.authorIds}</Typography>
+                    <Typography>Authors: {book.authorFullNames.join(", ")}</Typography>
                     <Typography>Category: {book.categoryId}</Typography>
                     <Typography>Available copies: {book.availableCopies}</Typography>
                     <Button component={Link} to={`/books/${book.id}`}>
