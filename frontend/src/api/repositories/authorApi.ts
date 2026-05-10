@@ -3,6 +3,7 @@ import axiosInstance from "../../axios/axios";
 
 const authorRepository = {
     findAll: async () => {
+        console.log("povik authors")
         const response = await axiosInstance.get<Author[]>("/authors");
         return response.data;
     },

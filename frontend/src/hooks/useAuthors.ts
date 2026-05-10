@@ -7,7 +7,7 @@ const useAuthors = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<Error | null>(null);
 
-    const fetch = useCallback(async () => {
+    const fetchAuthors = useCallback(async () => {
         setLoading(true);
 
         try {
@@ -22,10 +22,10 @@ const useAuthors = () => {
     }, []);
 
     useEffect(() => {
-        void fetch();
-    }, [fetch]);
+        void fetchAuthors();
+    }, [fetchAuthors]);
 
-    return { authors, loading, error, fetch };
+    return { authors, loading, error, fetch: fetchAuthors };
 };
 
 export default useAuthors;

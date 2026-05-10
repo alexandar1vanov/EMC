@@ -59,11 +59,16 @@ public class BookApplicationServiceImpl implements BookApplicationService {
 
     @Override
     public Optional<DisplayBookDTO> update(Long id, CreateBookDTO createBookDTO) {
-        Category category = categoryRepository.findById(createBookDTO.categoryId())
+        Category category = categoryRepository
+                .findById(createBookDTO.categoryId())
                 .orElseThrow(() -> new IllegalStateException("Didnt find category with id: " + createBookDTO.categoryId()));
+
         List<Author> authors = authorService.findAllByIds(createBookDTO.authorIds());
-        State state = stateRepository.findById(createBookDTO.stateId())
+
+        State state = stateRepository
+                .findById(createBookDTO.stateId())
                 .orElseThrow(() -> new IllegalStateException("Didnt find state with id: " + createBookDTO.stateId()));
+
         return bookService.update(id, createBookDTO.toBook(category, authors, state)).map(DisplayBookDTO::from);
     }
 
@@ -92,7 +97,7 @@ public class BookApplicationServiceImpl implements BookApplicationService {
 
     @Override
     public Object findAll(int page, int size, String sortBy) {
-        Pageable pageable=PageRequest.of(page, size, Sort.by(sortBy));
+        Pageable pageable = PageRequest.of(page, size, Sort.by(sortBy));
 
         return bookService.findAll(pageable)
                 .map(DisplayBookDTO::from);

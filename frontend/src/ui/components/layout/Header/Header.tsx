@@ -13,18 +13,24 @@ import {
 } from "@mui/material";
 import './Header.css';
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import {Link} from "react-router-dom";
+import {useState} from "react";
+import AuthToggle from '../../auth/AuthToggle/AuthToggle';
+import useAuth from '../../../../hooks/useAuth';
 
 const pages = [
-    { path: "/", name: "Home" },
-    { path: "/books", name: "Books" },
-    { path: "/authors", name: "Authors" },
-    { path: "/countries", name: "Countries" },
+    {path: "/", name: "Home", authenticated:false},
+    {path: "/books", name: "Books", authenticated: true},
+    {path: "/authors", name: "Authors"},
+    {path: "/countries", name: "Countries"},
 ];
 
 const Header = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
+
+    //promeni tuka i vo pages authenticated
+    const {isLoggedIn}=useAuth();
+    const visiblePages=pages.filter((page)=>!page.authenticated || isLoggedIn);
 
     return (
         <Box>
@@ -35,23 +41,23 @@ const Header = () => {
                         edge="start"
                         color="inherit"
                         aria-label="menu"
-                        sx={{ mr: 2, display: { md: "none" } }}
+                        sx={{mr: 2, display: {md: "none"}}}
                         onClick={() => setDrawerOpen(true)}
                     >
-                        <MenuIcon />
+                        <MenuIcon/>
                     </IconButton>
 
-                    <Typography variant="h6" component="div" sx={{ mr: 3 }}>
+                    <Typography variant="h6" component="div" sx={{mr: 3}}>
                         EMT Library
                     </Typography>
 
-                    <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+                    <Box sx={{flexGrow: 1, display: {xs: "none", md: "flex"}}}>
                         {pages.map((page) => (
                             <Button
                                 key={page.name}
                                 component={Link}
                                 to={page.path}
-                                sx={{ my: 2, color: "white", display: "block" }}
+                                sx={{my: 2, color: "white", display: "block"}}
                             >
                                 {page.name}
                             </Button>
@@ -61,12 +67,12 @@ const Header = () => {
             </AppBar>
 
             <Drawer anchor="left" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-                <Box sx={{ width: 240 }} role="presentation" onClick={() => setDrawerOpen(false)}>
+                <Box sx={{width: 240}} role="presentation" onClick={() => setDrawerOpen(false)}>
                     <List>
                         {pages.map((page) => (
                             <ListItem key={page.name} disablePadding>
                                 <ListItemButton component={Link} to={page.path}>
-                                    <ListItemText primary={page.name} />
+                                    <ListItemText primary={page.name}/>
                                 </ListItemButton>
                             </ListItem>
                         ))}

@@ -1,0 +1,131 @@
+import {Alert, Box, Button, Card, CardActions, CardContent, Snackbar, Typography} from '@mui/material';
+import InfoIcon from '@mui/icons-material/Info';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import type {Book, BookFormData} from '../../../../api/types/book';
+import {useNavigate} from 'react-router';
+import {useState} from 'react';
+import EditBookDialog from '../EditBookDialog/EditBookDialog';
+import DeleteBookDialog from '../DeleteBookDialog/DeleteBookDialog';
+import useAuth from '../../../../hooks/useAuth';
+
+interface BookCardProps {
+    book: Book;
+    onEdit: (id: number, data: BookFormData) => Promise<void>;
+    onDelete: (id: number) => Promise<void>;
+}
+
+const BookCard = ({book, onEdit, onDelete}: BookCardProps) => {
+    const {user} = useAuth();
+    const isAdmin = user?.roles.includes('ROLE_ADMINISTRATOR') ?? false;
+
+    const navigate = useNavigate();
+
+    const [snackbar, setSnackbar] = useState<{ open: boolean; message: string }>({
+        open: false,
+        message: ''
+    });
+
+    const [editBookDialogOpen, setEditBookDialogOpen] = useState<boolean>(false);
+    const [deleteBookDialogOpen, setDeleteBookDialogOpen] = useState<boolean>(false);
+
+    const handleEdit = async (id: number, data: BookFormData) => {
+        try {
+            await onEdit(id, data);
+        } catch (err) {
+            setSnackbar({
+                open: true,
+                message: err instanceof Error ? err.message : 'Failed to edit book.'
+            });
+        }
+    };
+
+    const handleDelete = async (id: number) => {
+        try {
+            await onDelete(id);
+        } catch (err) {
+            setSnackbar({
+                open: true,
+                message: err instanceof Error ? err.message : 'Failed to delete book.'
+            });
+        }
+    };
+
+    return (
+        <>
+            <Card sx={{maxWidth: 300, height: '100%', display: 'flex', flexDirection: 'column'}}>
+                <CardContent sx={{flexGrow: 1, display: 'flex', flexDirection: 'column'}}>
+                    <Typography variant="h5">
+                        {book.name}
+                    </Typography>
+
+                    <Typography variant="body2">
+                        Available copies: {book.availableCopies}
+                    </Typography>
+
+                    <Typography variant="body2">
+                        Category ID: {book.categoryId}
+                    </Typography>
+
+                    <Typography variant="body2">
+                        State ID: {book.stateId}
+                    </Typography>
+                </CardContent>
+                <CardActions sx={{justifyContent: 'space-between'}}>
+                    <Button
+                        startIcon={<InfoIcon/>}
+                        onClick={() => navigate(`/books/${book.id}`)}
+                    >
+                        Info
+                    </Button>
+                    <Box>
+                        {isAdmin && (
+                            <Button
+                                startIcon={<EditIcon/>}
+                                color='warning'
+                                onClick={() => setEditBookDialogOpen(true)}
+                            >
+                                Edit
+                            </Button>
+                        )}
+                        {isAdmin && (
+                            <Button
+                                startIcon={<DeleteIcon/>}
+                                color='error'
+                                onClick={() => setDeleteBookDialogOpen(true)}
+                            >
+                                Delete
+                            </Button>
+                        )}
+                    </Box>
+                </CardActions>
+            </Card>
+            <Snackbar
+                open={snackbar.open}
+                autoHideDuration={3000}
+                onClose={() => setSnackbar((prev) => ({...prev, open: false}))}
+                anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
+            >
+                <Alert
+                    severity='error'
+                    onClose={() => setSnackbar((prev) => ({...prev, open: false}))}>
+                    {snackbar.message}
+                </Alert>
+            </Snackbar>
+            <EditBookDialog
+                book={book}
+                open={editBookDialogOpen}
+                onClose={() => setEditBookDialogOpen(false)}
+                onEdit={handleEdit}
+            />
+            <DeleteBookDialog
+                book={book}
+                open={deleteBookDialogOpen}
+                onClose={() => setDeleteBookDialogOpen(false)}
+                onDelete={handleDelete}
+            />
+        </>
+    );
+};
+
+export default BookCard;

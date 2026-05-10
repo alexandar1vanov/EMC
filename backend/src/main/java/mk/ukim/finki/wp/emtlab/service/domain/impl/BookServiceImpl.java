@@ -58,7 +58,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public Optional<Book> deleteById(Long id) {
         return bookRepository.findById(id).map(book -> {
-            if (book.getAvailableCopies() == 0 && book.getState().getState().equals("BAD")) {
+            if (book.getAvailableCopies() == 0 || book.getState().getState().equals("BAD")) {
                 bookRepository.delete(book);
                 return book;
             } else {

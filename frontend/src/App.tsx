@@ -8,20 +8,23 @@ import BookDetailsPage from "./ui/pages/BookDetailsPage/BookDetailsPage";
 import AuthorDetailsPage from "./ui/pages/AuthorDetailsPage/AuthorDetailsPage";
 import CountryDetailsPage from "./ui/pages/CountryDetailsPage/CountryDetailsPage";
 import LoginPage from "./ui/pages/LoginPage/LoginPage";
+import RegisterPage from "./ui/pages/auth/RegisterPage/RegisterPage";
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
 
-                {/*✅ WRAPPER ROUTE */}
+                {/* WRAPPER ROUTE */}
                 <Route path="/" element={<Layout/>}>
 
                     <Route index element={<HomePage/>}/>
                     <Route path="login" element={<LoginPage/>}/>
+                    <Route path="register" element={<RegisterPage/>}/>
 
                     <Route path="books" element={<BooksPage/>}/>
                     <Route path="books/:id" element={<BookDetailsPage/>}/>
+
 
                     <Route path="authors" element={<AuthorsPage/>}/>
                     <Route path="authors/:id" element={<AuthorDetailsPage/>}/>

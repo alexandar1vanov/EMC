@@ -12,6 +12,7 @@ public record DisplayBookDTO(
         String name,
         Long categoryId,
         List<String> authorFullNames,
+        List<Long> authorIds,
         Long stateId,
         Integer availableCopies
 ) {
@@ -23,6 +24,7 @@ public record DisplayBookDTO(
                 book.getName(),
                 book.getCategory().getId(),
                 book.getAuthors().stream().map(author -> author.getName() + " " + author.getSurname()).toList(),
+                book.getAuthors().stream().map(BaseEntity::getId).toList(),
                 book.getState().getId(),
                 book.getAvailableCopies()
         );

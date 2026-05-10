@@ -81,7 +81,7 @@ public class JwtWebSecurityConfig {
                                 .authenticated()
                                 .requestMatchers(
                                         "/api/books",
-                                        "/api/books/{id}/detailed",
+                                        "/api/books/detailed/{id}",
                                         "/api/books/filterCategory",
                                         "/api/books/paged",
                                         "/api/books/filter",
@@ -96,19 +96,17 @@ public class JwtWebSecurityConfig {
                                         "/api/countries/{id}"
 
                                 )
-//                                .hasRole("USER")
-                                .permitAll()
+                                .hasRole("USER")
                                 .requestMatchers(
                                         "/api/books/add",
-                                        "/api/books/{id}/edit",
-                                        "/api/books/{id}/delete",
-                                        "/api/books/{id}/rent"
+                                        "/api/books/edit/{id}",
+                                        "/api/books/delete/{id}",
+                                        "/api/books/rent/{id}"
                                 )
-//                                .hasRole("ADMINISTRATOR")
-                                .permitAll()
+                                .hasRole("ADMINISTRATOR")
                                 .anyRequest()
-//                                .hasRole("ADMINISTRATOR")
-                                .permitAll()
+                                .hasRole("ADMINISTRATOR")
+
                 )
                 .sessionManagement(sessionManagementConfigurer ->
                         sessionManagementConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
